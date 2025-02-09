@@ -2556,82 +2556,80 @@ a:not(.btn):not(.read-more):not(.work-link):not(.read-btn):not(.apply-btn):not(.
 /* 修改教师头像容器样式 */
 .teachers-images {
     display: flex;
-    gap: 2rem;
+    gap: 3rem; /* 增加头像间距 */
     justify-content: center;
-    margin-top: 2rem;
+    margin-top: 3rem;
 }
 
-/* 单个教师头像 */
+/* 单个教师头像容器 */
 .teacher-image {
     position: relative;
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
+    width: 180px; /* 增大尺寸 */
+    height: 220px; /* 增大尺寸，稍微拉长 */
+    border-radius: 30px; /* 圆角矩形 */
     overflow: hidden;
     cursor: pointer;
-    transition: all 0.4s ease;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     border: 3px solid rgba(65, 105, 225, 0.2);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
-.teacher-image:hover {
-    transform: scale(1.1);
-    border-color: rgba(65, 105, 225, 0.5);
-    box-shadow: 
-        0 10px 20px rgba(65, 105, 225, 0.2),
-        0 0 30px rgba(147, 112, 219, 0.1);
-}
-
+/* 头像图片 */
 .teacher-avatar {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: all 0.4s ease;
+    transition: transform 0.4s ease;
+}
+
+/* 悬停效果 */
+.teacher-image:hover {
+    transform: translateY(-10px);
+    border-color: rgba(65, 105, 225, 0.5);
+    box-shadow: 
+        0 15px 30px rgba(65, 105, 225, 0.2),
+        0 0 30px rgba(102, 0, 204, 0.1);
 }
 
 .teacher-image:hover .teacher-avatar {
     transform: scale(1.1);
 }
 
+/* 教师名字遮罩 */
 .teacher-overlay {
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
-    padding: 0.5rem;
-    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    padding: 1rem;
+    background: linear-gradient(to top, 
+        rgba(0, 0, 0, 0.8),
+        transparent
+    );
     color: white;
     text-align: center;
     transform: translateY(100%);
-    transition: all 0.4s ease;
+    transition: transform 0.4s ease;
 }
 
 .teacher-image:hover .teacher-overlay {
     transform: translateY(0);
 }
 
-.teacher-info h4 {
+.teacher-overlay span {
     font-size: 1.2rem;
-    color: var(--light);
-    margin-bottom: 0.5rem;
-}
-
-.teacher-title {
-    color: var(--primary);
-    font-size: 0.9rem;
-    margin-bottom: 0.8rem;
-}
-
-.teacher-desc {
-    color: var(--gray);
-    font-size: 0.9rem;
-    line-height: 1.5;
+    font-weight: 500;
 }
 
 /* 响应式调整 */
 @media (max-width: 768px) {
+    .teacher-image {
+        width: 150px;
+        height: 180px;
+    }
+    
     .teachers-images {
-        grid-template-columns: 1fr;
-        gap: 1rem;
+        gap: 2rem;
     }
 }
 
