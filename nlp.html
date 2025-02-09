@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>自然语言处理研究方向 - 开窍AI实验室</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .research-detail {
+            padding: 8rem 0;
+            min-height: 100vh;
+        }
+
+        .research-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .research-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(90deg, #4169E1, #FF69B4);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .research-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(20px);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            line-height: 1.8;
+            text-align: center;
+        }
+
+        .research-section {
+            margin-bottom: 3rem;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .research-section.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .research-section h2 {
+            color: var(--primary);
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .research-section h3 {
+            color: var(--light);
+            font-size: 1.4rem;
+            margin: 2rem 0 1rem;
+        }
+
+        .research-section p {
+            color: var(--gray);
+            margin-bottom: 1.5rem;
+        }
+
+        .research-section ul {
+            list-style: none;
+            padding: 0;
+            margin: 1.5rem auto;
+            max-width: 600px;
+            text-align: left;
+        }
+
+        .tech-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+            text-align: center;
+        }
+
+        .tech-item {
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 15px;
+            padding: 1.5rem;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            text-align: center;
+        }
+
+        .tech-item h4 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .tech-item p {
+            font-size: 0.95rem;
+            margin-bottom: 0;
+        }
+
+        .highlight {
+            color: var(--primary);
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+    <div class="page-transition">
+        <span class="transition-text">切换界面中...</span>
+    </div>
+
+    <div class="nav-buttons">
+        <button class="nav-btn" onclick="history.back()" data-tooltip="返回">
+            <i class="fas fa-arrow-left"></i>
+        </button>
+        <a href="index.html" class="nav-btn" data-tooltip="首页">
+            <i class="fas fa-home"></i>
+        </a>
+    </div>
+
+    <section class="research-detail">
+        <div class="container">
+            <div class="research-header">
+                <h1>自然语言处理研究方向</h1>
+                <p>探索语言的奥秘，构建智能对话系统</p>
+            </div>
+
+            <div class="research-content">
+                <div class="research-section">
+                    <h2>研究概述</h2>
+                    <p>自然语言处理（NLP）是人工智能的重要分支，致力于使计算机理解和处理人类语言。我们的研究涵盖了从基础语言理解到高级语义分析的多个层面，旨在推动人机交互的革新。</p>
+                    
+                    <div class="tech-list">
+                        <div class="tech-item">
+                            <h4>语义理解</h4>
+                            <p>利用深度学习模型分析文本语义结构，实现准确的语义理解和关系抽取。</p>
+                        </div>
+                        <div class="tech-item">
+                            <h4>情感分析</h4>
+                            <p>开发情感识别算法，精确捕捉文本中的情感倾向和语气变化。</p>
+                        </div>
+                        <div class="tech-item">
+                            <h4>机器翻译</h4>
+                            <p>研究神经机器翻译技术，实现高质量的跨语言文本转换。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="research-section">
+                    <h2>核心技术</h2>
+                    <h3>语言模型架构</h3>
+                    <p>采用先进的Transformer架构，结合注意力机制和多层编码器-解码器结构，提升模型的语言理解能力。主要技术包括：</p>
+                    <ul>
+                        <li><span class="highlight">多头注意力机制</span>：实现多角度的文本特征提取</li>
+                        <li><span class="highlight">上下文编码</span>：捕捉长距离语义依赖关系</li>
+                        <li><span class="highlight">位置编码</span>：保持文本序列的位置信息</li>
+                    </ul>
+                </div>
+
+                <div class="research-section">
+                    <h2>应用场景</h2>
+                    <p>我们的研究成果在多个领域得到应用：</p>
+                    <ul>
+                        <li>智能客服系统</li>
+                        <li>文本摘要生成</li>
+                        <li>多语言翻译平台</li>
+                        <li>情感分析系统</li>
+                        <li>知识图谱构建</li>
+                    </ul>
+                </div>
+
+                <div class="research-section">
+                    <h2>未来展望</h2>
+                    <p>我们将继续探索：</p>
+                    <ul>
+                        <li>更强大的语言理解模型</li>
+                        <li>跨模态融合技术</li>
+                        <li>低资源语言处理</li>
+                        <li>实时翻译系统</li>
+                    </ul>
+                    <p>通过持续创新和技术突破，推动自然语言处理技术的发展，为人机交互带来新的可能。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const sections = document.querySelectorAll('.research-section');
+            sections.forEach((section, index) => {
+                setTimeout(() => {
+                    section.classList.add('show');
+                }, 200 + (index * 200));
+            });
+        });
+    </script>
+</body>
+</html> 

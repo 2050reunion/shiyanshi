@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>大语言模型研究方向 - 开窍AI实验室</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .research-detail {
+            padding: 8rem 0;
+            min-height: 100vh;
+        }
+
+        .research-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .research-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(90deg, #4169E1, #FF69B4);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .research-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(20px);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            line-height: 1.8;
+        }
+
+        .research-section {
+            margin-bottom: 3rem;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .research-section.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .research-section h2 {
+            color: var(--primary);
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .research-section h3 {
+            color: var(--light);
+            font-size: 1.4rem;
+            margin: 2rem 0 1rem;
+        }
+
+        .research-section p {
+            margin-bottom: 1rem;
+            color: var(--light);
+        }
+
+        .research-section ul {
+            list-style: none;
+            padding-left: 1.5rem;
+        }
+
+        .research-section li {
+            margin-bottom: 1rem;
+            position: relative;
+            color: var(--gray);
+        }
+
+        .research-section li::before {
+            content: '';
+            position: absolute;
+            left: -1.5rem;
+            top: 0.7rem;
+            width: 8px;
+            height: 8px;
+            background: linear-gradient(135deg, #4169E1, #FF69B4);
+            border-radius: 50%;
+        }
+
+        .tech-highlight {
+            color: var(--primary);
+            font-weight: 500;
+        }
+
+        .divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--primary), transparent);
+            margin: 3rem 0;
+            opacity: 0.3;
+        }
+
+        /* 添加模型架构图样式 */
+        .model-architecture {
+            margin: 2rem 0;
+            padding: 1.5rem;
+            background: rgba(0, 209, 255, 0.05);
+            border-radius: 10px;
+            border: 1px solid rgba(0, 209, 255, 0.1);
+        }
+
+        .model-architecture img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="page-transition">
+        <span class="transition-text">切换界面中...</span>
+    </div>
+
+    <div class="nav-buttons">
+        <button class="nav-btn" onclick="history.back()" data-tooltip="返回">
+            <i class="fas fa-arrow-left"></i>
+        </button>
+        <a href="index.html" class="nav-btn" data-tooltip="首页">
+            <i class="fas fa-home"></i>
+        </a>
+    </div>
+
+    <section class="research-detail">
+        <div class="container">
+            <div class="research-header">
+                <h1>大语言模型研究方向</h1>
+                <p>通过神经网络分层分析，输出最有可能的答案</p>
+            </div>
+            <div class="research-content">
+                <div class="research-section">
+                    <h2>1. 神经网络架构</h2>
+                    <p>大语言模型（LLMs）基于 Transformer 架构，引入了自注意力机制，能够更好地捕捉长序列中的依赖关系。</p>
+
+                    <h3>核心特点</h3>
+                    <ul>
+                        <li><span class="tech-highlight">Transformer架构</span>：摒弃了传统RNN的顺序处理方式，采用并行计算提高效率。</li>
+                        
+                        <li><span class="tech-highlight">自注意力机制</span>：允许模型在处理每个位置时关注整个输入序列，提升上下文理解能力。</li>
+                        
+                        <li><span class="tech-highlight">多层结构</span>：由多个编码器和解码器层堆叠而成，每层执行特定的计算任务。</li>
+                    </ul>
+                </div>
+
+                <div class="divider"></div>
+
+                <div class="research-section">
+                    <h2>2. 分层分析过程</h2>
+                    <p>大语言模型通过多层神经网络进行逐层分析和处理：</p>
+
+                    <h3>处理层级</h3>
+                    <ul>
+                        <li><span class="tech-highlight">底层特征提取</span>：将输入文本转化为向量表示，编码语义和语法信息。通过线性变换和非线性激活函数，提取基础特征。</li>
+                        
+                        <li><span class="tech-highlight">中层语义理解</span>：整合底层特征，理解句子结构、指代关系、语义角色等。捕捉文本的逻辑关系和语义依赖。</li>
+                        
+                        <li><span class="tech-highlight">高层知识推理</span>：基于中层理解进行知识推理，结合训练数据中学到的知识，生成最终答案。</li>
+                    </ul>
+                </div>
+
+                <div class="divider"></div>
+
+                <div class="research-section">
+                    <h2>3. 训练过程</h2>
+                    <p>大语言模型通过多阶段训练来优化其参数：</p>
+
+                    <ul>
+                        <li><span class="tech-highlight">无监督预训练</span>：在海量文本数据上进行自监督学习，如预测被遮蔽的单词，学习语言的统计规律。</li>
+                        
+                        <li><span class="tech-highlight">有监督微调</span>：使用标注数据集进行针对性训练，优化特定任务的性能。</li>
+                        
+                        <li><span class="tech-highlight">持续学习</span>：通过增量训练和在线学习，不断更新和改进模型的能力。</li>
+                    </ul>
+                </div>
+
+                <div class="divider"></div>
+
+                <div class="research-section">
+                    <h2>4. 应用场景</h2>
+                    <p>大语言模型在多个领域展现出强大的应用价值：</p>
+
+                    <ul>
+                        <li><span class="tech-highlight">智能问答</span>：回答用户问题，提供准确、相关的信息。</li>
+                        
+                        <li><span class="tech-highlight">文本生成</span>：创作文章、报告、代码等各类文本内容。</li>
+                        
+                        <li><span class="tech-highlight">语言翻译</span>：实现多语言之间的准确翻译。</li>
+                        
+                        <li><span class="tech-highlight">对话系统</span>：提供自然、流畅的人机对话体验。</li>
+                        
+                        <li><span class="tech-highlight">知识问答</span>：基于大规模知识库回答专业问题。</li>
+                    </ul>
+                </div>
+
+                <div class="divider"></div>
+
+                <div class="research-section">
+                    <h2>5. 未来展望</h2>
+                    <p>大语言模型的发展方向：</p>
+
+                    <ul>
+                        <li><span class="tech-highlight">更强的理解能力</span>：提升对复杂语言现象的理解和推理能力。</li>
+                        
+                        <li><span class="tech-highlight">更可靠的输出</span>：增强输出的准确性和可靠性。</li>
+                        
+                        <li><span class="tech-highlight">更高的效率</span>：优化模型结构，降低计算资源需求。</li>
+                        
+                        <li><span class="tech-highlight">更广的应用</span>：探索更多领域的创新应用。</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const sections = document.querySelectorAll('.research-section');
+            sections.forEach((section, index) => {
+                setTimeout(() => {
+                    section.classList.add('show');
+                }, 200 + (index * 200));
+            });
+        });
+    </script>
+</body>
+</html> 

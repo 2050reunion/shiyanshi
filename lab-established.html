@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>"意想不到"的实验室 - 开窍AI实验室</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .news-container {
+            max-width: 800px;
+            margin: 8rem auto 4rem;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(20px);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .news-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .news-date {
+            color: var(--primary);
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+        }
+
+        .news-title {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            background: linear-gradient(90deg, #4169E1, #FF69B4);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .news-content {
+            line-height: 1.8;
+            color: var(--light);
+            white-space: pre-line;
+        }
+
+        .news-section {
+            margin-bottom: 2rem;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .news-section.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .news-section h2 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="page-transition">
+        <span class="transition-text">切换界面中...</span>
+    </div>
+
+    <!-- 添加导航按钮 -->
+    <div class="nav-buttons">
+        <button class="nav-btn" onclick="history.back()" data-tooltip="返回">
+            <i class="fas fa-arrow-left"></i>
+        </button>
+        <a href="index.html" class="nav-btn" data-tooltip="首页">
+            <i class="fas fa-home"></i>
+        </a>
+    </div>
+
+    <div class="news-container">
+        <div class="news-header">
+            <div class="news-date">2024年3月</div>
+            <h1 class="news-title">"意想不到"的实验室</h1>
+        </div>
+        <div class="news-content">
+            <div class="news-section">
+                <h2>实验室成立</h2>
+                <p>2024年3月，开窍AI实验室正式成立。这不仅是一个研究机构的诞生，更是一个充满"意想不到"可能性的创新平台。实验室汇聚了来自计算机科学、人工智能、数学等多个领域的优秀人才，他们将在这里开启一段探索AI前沿的激动人心之旅。</p>
+
+                <p>实验室名称"开窍"寓意深远：一方面象征着我们致力于为人工智能开启新的认知维度，探索机器智能的本质；另一方面也代表着我们希望通过技术创新和教育实践，帮助更多人理解和掌握AI技术。</p>
+            </div>
+
+            <div class="news-section">
+                <h2>创新理念</h2>
+                <p>开窍AI实验室秉持"技术创新、跨界融合、开放共享"的理念，在以下方面展现独特价值：</p>
+                <ul>
+                    <li><span class="highlight">前沿研究</span>：专注于大语言模型、计算机视觉、机器学习等前沿领域的基础理论研究。</li>
+                    <li><span class="highlight">应用创新</span>：将AI技术与艺术创作、教育培训、生活服务等领域深度融合。</li>
+                    <li><span class="highlight">人才培养</span>：建立完整的AI人才培养体系，从入门到专业的递进式课程设计。</li>
+                    <li><span class="highlight">开放合作</span>：与高校、企业建立广泛的合作网络，促进产学研深度融合。</li>
+                </ul>
+            </div>
+
+            <div class="news-section">
+                <h2>特色项目</h2>
+                <p>实验室设立了多个创新项目，包括：</p>
+                <ul>
+                    <li><span class="highlight">AI艺术工作室</span>：探索AI技术在音乐、视觉艺术、文学创作等领域的创新应用。</li>
+                    <li><span class="highlight">智能教育实验室</span>：开发基于AI的个性化学习系统，提升教育效果。</li>
+                    <li><span class="highlight">开源技术社区</span>：建立开源项目平台，促进技术交流与创新。</li>
+                </ul>
+            </div>
+
+            <div class="news-section">
+                <h2>未来展望</h2>
+                <p>展望未来，开窍AI实验室将：</p>
+                <ul>
+                    <li>持续推进AI基础理论研究，突破关键技术瓶颈</li>
+                    <li>扩大产学研合作网络，促进技术转化与应用</li>
+                    <li>完善人才培养体系，培育更多AI创新人才</li>
+                    <li>探索AI技术的更多可能性，创造更多"意想不到"的价值</li>
+                </ul>
+                
+                <p>我们相信，通过团队的不懈努力和创新探索，开窍AI实验室必将成为推动AI技术发展的重要力量。</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // 添加容器进入动画
+            const container = document.querySelector('.news-container');
+            container.style.opacity = '0';
+            setTimeout(() => {
+                container.style.opacity = '1';
+                container.style.transition = 'opacity 0.8s ease';
+            }, 100);
+
+            // 为每个段落添加渐入效果
+            const sections = document.querySelectorAll('.news-section');
+            sections.forEach((section, index) => {
+                setTimeout(() => {
+                    section.classList.add('show');
+                }, 400 + (index * 200));
+            });
+        });
+    </script>
+</body>
+</html> 

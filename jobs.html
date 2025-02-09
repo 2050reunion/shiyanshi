@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>加入我们 - 开窍AI实验室</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .jobs-container {
+            max-width: 800px;
+            margin: 8rem auto 4rem;
+            padding: 2rem;
+        }
+
+        .jobs-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .jobs-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .jobs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .job-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .job-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--gradient);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: 0;
+        }
+
+        .job-card:hover::before {
+            opacity: 0.1;
+        }
+
+        .job-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .job-icon {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .job-title {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .job-desc {
+            color: var(--gray);
+            margin-bottom: 2rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .job-status {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .status-open {
+            background: rgba(0, 255, 0, 0.1);
+            color: #00ff00;
+        }
+
+        .status-closed {
+            background: rgba(255, 0, 0, 0.1);
+            color: #ff0000;
+        }
+
+        .apply-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.8rem 2rem;
+            background: var(--gradient);
+            border: none;
+            border-radius: 50px;
+            color: var(--light);
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            z-index: 1;
+        }
+
+        .apply-btn:disabled {
+            background: rgba(255, 255, 255, 0.1);
+            cursor: not-allowed;
+            color: var(--gray);
+        }
+
+        .apply-btn:not(:disabled):hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(0, 209, 255, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="page-transition">
+        <span class="transition-text">切换界面中...</span>
+    </div>
+
+    <div class="nav-buttons">
+        <button class="nav-btn" onclick="history.back()" data-tooltip="返回">
+            <i class="fas fa-arrow-left"></i>
+        </button>
+        <a href="index.html" class="nav-btn" data-tooltip="首页">
+            <i class="fas fa-home"></i>
+        </a>
+    </div>
+
+    <div class="jobs-container">
+        <div class="jobs-header">
+            <h1>加入开窍AI实验室</h1>
+            <p>与优秀的人一起，探索AI的无限可能</p>
+        </div>
+
+        <div class="jobs-grid">
+            <div class="job-card">
+                <div class="job-icon">
+                    <i class="fas fa-chalkboard-teacher"></i>
+                </div>
+                <h3 class="job-title">讲师</h3>
+                <span class="job-status status-closed">暂未开放</span>
+                <p class="job-desc">引领学生探索AI技术前沿，培养下一代AI人才。</p>
+                <button class="apply-btn" disabled>
+                    <i class="fas fa-lock"></i> 申请加入
+                </button>
+            </div>
+
+            <div class="job-card">
+                <div class="job-icon">
+                    <i class="fas fa-hands-helping"></i>
+                </div>
+                <h3 class="job-title">助教</h3>
+                <span class="job-status status-closed">暂未开放</span>
+                <p class="job-desc">协助教学工作，帮助学生解决技术难题。</p>
+                <button class="apply-btn" disabled>
+                    <i class="fas fa-lock"></i> 申请加入
+                </button>
+            </div>
+
+            <div class="job-card">
+                <div class="job-icon">
+                    <i class="fas fa-microscope"></i>
+                </div>
+                <h3 class="job-title">研究员</h3>
+                <span class="job-status status-open">正在招募</span>
+                <p class="job-desc">参与前沿AI技术研究，推动技术创新。</p>
+                <button class="apply-btn" onclick="window.location.href='mailto:yansirui_813@163.com?subject=研究员申请&body=我想加入开窍AI实验室，成为一名研究员...'">
+                    <i class="fas fa-paper-plane"></i> 申请加入
+                </button>
+            </div>
+
+            <div class="job-card">
+                <div class="job-icon">
+                    <i class="fas fa-user-graduate"></i>
+                </div>
+                <h3 class="job-title">学长/学姐</h3>
+                <span class="job-status status-closed">暂未开放</span>
+                <p class="job-desc">分享学习经验，指导新成员成长。</p>
+                <button class="apply-btn" disabled>
+                    <i class="fas fa-lock"></i> 申请加入
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // 添加卡片动画
+            const cards = document.querySelectorAll('.job-card');
+            cards.forEach((card, index) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                setTimeout(() => {
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                    card.style.transition = 'all 0.8s cubic-bezier(0.4, 0, 0.2, 1)';
+                }, 200 + (index * 100));
+            });
+        });
+    </script>
+</body>
+</html> 

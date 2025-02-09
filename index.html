@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>开窍AI实验室</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- 在 body 开头添加过渡动画容器 -->
+    <div class="page-transition">
+        <span class="transition-text">切换界面中...</span>
+    </div>
+
+    <!-- 导航栏 -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-brand">
+                <div class="logo">
+                    <span class="logo-icon">AI</span>
+                </div>
+                <div class="brand-container">
+                    <span class="brand-text">开窍AI实验室-研究员作品</span>
+                    <div class="authors">
+                        <span class="author">@鄢思睿</span>
+                        <span class="author">@唐子卿</span>
+                        <span class="author">@唐瑞</span>
+                        <span class="author">@王欢</span>
+                        <span class="author">@包神</span>
+                    </div>
+                </div>
+            </div>
+            <button class="nav-toggle" aria-label="toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">首页</a></li>
+                <li><a href="#intro" class="nav-link">实验室介绍</a></li>
+                <li><a href="#projects" class="nav-link">研究方向</a></li>
+                <li><a href="#courses" class="nav-link">课程推荐</a></li>
+                <li><a href="#news" class="nav-link">最新动态</a></li>
+                <li><a href="students.html" class="nav-link works-btn">学生作品</a></li>
+                <li><a href="#footer" class="nav-link contact-btn">联系我们</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero部分 -->
+    <section class="hero" id="home">
+        <div class="hero-bg">
+            <div class="particles"></div>
+        </div>
+        <div class="hero-content">
+            <h1 class="glitch" data-text="开窍AI实验室">开窍AI实验室</h1>
+            <h1 class="glitch" data-text="探索AI的无限可能">探索AI的无限可能</h1>
+            <p class="hero-text">
+                突破技术边界，引领智能革新
+            </p>
+            <div class="hero-buttons">
+                <a href="students.html" class="btn btn-primary">学生作品</a>
+                <a href="jobs.html" class="btn btn-outline">加入我们</a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-number" data-number="10+">10+</span>
+                    <span class="stat-label">研究项目</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-number="300+">300+</span>
+                    <span class="stat-label">研究作品</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-number="80+">80+</span>
+                    <span class="stat-label">团队成员</span>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse"></div>
+            <span>向下滚动</span>
+        </div>
+    </section>
+
+    <!-- 在研究方向前添加实验室介绍部分 -->
+    <section class="lab-intro" id="intro">
+        <div class="container">
+            <h2 class="section-title">实验室介绍</h2>
+            <div class="intro-content">
+                <div class="intro-text">
+                    <p class="intro-desc">
+                        开窍AI实验室致力于人工智能领域的前沿研究与创新应用。我们以培养AI人才、推动技术创新为使命，通过深度学习、计算机视觉、自然语言处理等领域的研究，探索AI的无限可能。
+                    </p>
+                    <div class="intro-features">
+                        <div class="feature">
+                            <i class="fas fa-graduation-cap"></i>
+                            <h3>专业教学</h3>
+                            <p>顶尖师资团队，因材施教</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-flask"></i>
+                            <h3>创新研究</h3>
+                            <p>探索AI前沿，突破技术边界</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-users"></i>
+                            <h3>团队协作</h3>
+                            <p>开放交流，共同进步</p>
+                        </div>
+                    </div>
+                    <!-- 添加教师介绍 -->
+                    <div class="teachers-intro">
+                        <h3>教师团队</h3>
+                        <div class="teachers-grid">
+                            <div class="teacher-card">
+                                <div class="teacher-info">
+                                    <h4>欢哥</h4>
+                                    <p class="teacher-title">资深AI教师 | 清华毕业/脑科学博士</p>
+                                    <p class="teacher-desc">将脑科学与人工智能深度结合，在深度学习和类脑计算领域有独特见解。</p>
+                                </div>
+                            </div>
+                            <div class="teacher-card">
+                                <div class="teacher-info">
+                                    <h4>包神</h4>
+                                    <p class="teacher-title">资深AI教师 | 北大AI专家</p>
+                                    <p class="teacher-desc">在机器学习和人工智能领域有深厚造诣，擅长AI理论与实践的创新教学。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="intro-image">
+                    <!-- 修改右侧课程卡片部分 -->
+                    <div class="course-paths">
+                        <div class="path-card">
+                            <div class="path-icon">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <div class="path-content">
+                                <h4>编程基础</h4>
+                                <ul class="path-features">
+                                    <li>Python 入门</li>
+                                    <li>数据结构</li>
+                                    <li>算法基础</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="path-card">
+                            <div class="path-icon">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <div class="path-content">
+                                <h4>AI理论</h4>
+                                <ul class="path-features">
+                                    <li>机器学习</li>
+                                    <li>深度学习</li>
+                                    <li>神经网络</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="path-card">
+                            <div class="path-icon">
+                                <i class="fas fa-project-diagram"></i>
+                            </div>
+                            <div class="path-content">
+                                <h4>实战项目</h4>
+                                <ul class="path-features">
+                                    <li>计算机视觉</li>
+                                    <li>自然语言处理</li>
+                                    <li>强化学习</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 教师头像 -->
+                    <div class="teachers-images">
+                        <div class="teacher-image">
+                            <img src="huange.jpg" alt="欢哥" class="teacher-avatar">
+                            <div class="teacher-overlay">
+                                <span>欢哥</span>
+                            </div>
+                        </div>
+                        <div class="teacher-image">
+                            <img src="bao.jpg" alt="包神" class="teacher-avatar">
+                            <div class="teacher-overlay">
+                                <span>包神</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 研究方向 -->
+    <section class="research" id="projects">
+        <div class="container">
+            <h2 class="section-title">研究方向</h2>
+            <div class="research-grid">
+                <div class="research-card">
+                    <div class="card-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>深度学习</h3>
+                    <p>探索神经网络架构，优化学习算法，推动AI技术革新。</p>
+                    <button class="card-link" onclick="window.location.href='deep-learning.html'">
+                        <span>了解更多</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+
+                <div class="research-card">
+                    <div class="card-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3>自然语言处理</h3>
+                    <p>研究语义理解、情感分析、跨语言翻译等技术，构建智能对话与文本分析系统。</p>
+                    <button class="card-link" onclick="window.location.href='nlp.html'">
+                        了解更多 <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+
+                <div class="research-card">
+                    <div class="card-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3>计算机视觉</h3>
+                    <p>研究目标检测、场景分割、视觉推理等技术，实现智能视觉感知与理解。</p>
+                    <button class="card-link" onclick="window.location.href='computer-vision.html'">
+                        了解更多 <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+
+                <div class="research-card">
+                    <div class="card-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>大语言模型</h3>
+                    <p>研究Transformer架构、注意力机制、知识融合等技术，构建高性能语言理解与生成模型。</p>
+                    <button class="card-link" onclick="window.location.href='llm.html'">
+                        了解更多 <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 在研究方向和团队介绍之间添加课程推荐栏目 -->
+    <section class="courses" id="courses">
+        <div class="container">
+            <h2 class="section-title">课程推荐</h2>
+            <div class="courses-grid">
+                <!-- 入门课程 -->
+                <div class="course-card beginner">
+                    <div class="course-icon">
+                        <i class="fas fa-seedling"></i>
+                    </div>
+                    <div class="course-content">
+                        <h3>AI入门探索</h3>
+                        <p class="course-desc">适合零基础学习者，通过趣味项目激发AI兴趣</p>
+                        <ul class="course-features">
+                            <li><i class="fas fa-check"></i> Python编程基础</li>
+                            <li><i class="fas fa-check"></i> AI基本概念入门</li>
+                            <li><i class="fas fa-check"></i> 简单项目实践</li>
+                        </ul>
+                        <div class="course-footer">
+                            <span class="course-level">入门级</span>
+                            <span class="course-duration">6周课程</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 进阶课程 -->
+                <div class="course-card intermediate">
+                    <div class="course-icon">
+                        <i class="fas fa-code-branch"></i>
+                    </div>
+                    <div class="course-content">
+                        <h3>AI算法进阶</h3>
+                        <p class="course-desc">面向有编程基础的学习者，深入AI核心算法</p>
+                        <ul class="course-features">
+                            <li><i class="fas fa-check"></i> 机器学习基础算法</li>
+                            <li><i class="fas fa-check"></i> 深度学习框架应用</li>
+                            <li><i class="fas fa-check"></i> 实战项目开发</li>
+                        </ul>
+                        <div class="course-footer">
+                            <span class="course-level">进阶级</span>
+                            <span class="course-duration">6周课程</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 高阶课程 -->
+                <div class="course-card advanced">
+                    <div class="course-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <div class="course-content">
+                        <h3>AI创新研究</h3>
+                        <p class="course-desc">针对AI领域研究者，探索前沿技术创新</p>
+                        <ul class="course-features">
+                            <li><i class="fas fa-check"></i> 前沿算法研究</li>
+                            <li><i class="fas fa-check"></i> 论文阅读与复现</li>
+                            <li><i class="fas fa-check"></i> 创新项目开发</li>
+                        </ul>
+                        <div class="course-footer">
+                            <span class="course-level">高阶级</span>
+                            <span class="course-duration">6周课程</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 最新动态 -->
+    <section class="news" id="news">
+        <div class="container">
+            <h2 class="section-title">最新动态</h2>
+            <div class="news-slider">
+                <div class="news-timeline"></div>
+                
+                <div class="news-card">
+                    <div class="news-date">
+                        <div class="date-circle">
+                            <span class="day">15</span>
+                            <span class="month">02</span>
+                        </div>
+                        <span class="year">2025</span>
+                    </div>
+                    <div class="news-dot"></div>
+                    <div class="news-content">
+                        <h3>
+                            <i class="fas fa-flask"></i>
+                            突破性研究成果
+                        </h3>
+                        <div class="news-tags">
+                            <span class="news-tag">研究成果</span>
+                            <span class="news-tag">AI创新</span>
+                        </div>
+                        <p>开发新型注意力机制，提升模型性能30%；场景理解算法突破，目标检测准确率达95%；AI音乐创作系统成功举办首场交响音乐会。</p>
+                        <a href="breakthrough.html" class="news-link">
+                            <span>了解更多</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="news-card">
+                    <div class="news-date">
+                        <div class="date-circle">
+                            <span class="day">20</span>
+                            <span class="month">12</span>
+                        </div>
+                        <span class="year">2024</span>
+                    </div>
+                    <div class="news-dot"></div>
+                    <div class="news-content">
+                        <h3>
+                            <i class="fas fa-rocket"></i>
+                            "意想不到"的实验室
+                        </h3>
+                        <div class="news-tags">
+                            <span class="news-tag">实验室新闻</span>
+                            <span class="news-tag">团队建设</span>
+                        </div>
+                        <p>开窍AI实验室正式成立，汇聚多领域优秀人才，设立AI艺术工作室、智能教育实验室等创新项目，致力于推动AI技术发展。</p>
+                        <a href="lab-established.html" class="news-link">
+                            <span>了解更多</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 加入我们 -->
+    <section class="join-us">
+        <div class="container">
+            <div class="join-content">
+                <h2>加入开窍AI实验室</h2>
+                <p>与顶尖人才共同探索AI的未来</p>
+                <a href="jobs.html" class="btn btn-primary">查看职位</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 学生事迹 -->
+    <section class="student-stories" id="student-stories">
+        <div class="container">
+            <h2 class="section-title">学生事迹</h2>
+            <div class="story-card">
+                <div class="story-header">
+                    <div class="student-avatar-container">
+                        <div class="student-avatar">
+                            <img src="tangsirui.jpg" alt="唐思瑞" 
+                                 onerror="this.src='default-avatar.jpg'; this.onerror=null;">
+                        </div>
+                        <div class="achievement-badge">
+                            <i class="fas fa-trophy"></i>
+                            <span>优秀学员</span>
+                        </div>
+                    </div>
+                    <div class="student-info">
+                        <h3 data-text="唐思瑞">唐思瑞</h3>
+                        <div class="student-tags">
+                            <span class="student-tag"><i class="fas fa-code"></i> 全栈开发</span>
+                            <span class="student-tag"><i class="fas fa-robot"></i> AI爱好者</span>
+                            <span class="student-tag"><i class="fas fa-calculator"></i> 数学达人</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="achievements-grid">
+                    <div class="achievement-card">
+                        <div class="achievement-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <h4>网站开发</h4>
+                        <p>独立开发4个商业网站，帮助花店提升营业额300%，获得多位客户好评。</p>
+                    </div>
+                    
+                    <div class="achievement-card">
+                        <div class="achievement-icon">
+                            <i class="fas fa-video"></i>
+                        </div>
+                        <h4>AI视频创作</h4>
+                        <p>制作AI动态视频在社交平台获得百万粉丝，展现AI技术的创新应用。</p>
+                    </div>
+                    
+                    <div class="achievement-card">
+                        <div class="achievement-icon">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <h4>数学竞赛</h4>
+                        <p>获得多项数学竞赛奖项，展现出色的逻辑思维和问题解决能力。</p>
+                    </div>
+                    
+                    <div class="achievement-card">
+                        <div class="achievement-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <h4>机器人比赛</h4>
+                        <p>在AI机器人比赛中协助修复关键代码，获得主办方特别表彰。</p>
+                    </div>
+                </div>
+                
+                <div class="story-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">4+</span>
+                        <span class="stat-label">商业项目</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">1M+</span>
+                        <span class="stat-label">粉丝数量</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">10+</span>
+                        <span class="stat-label">获奖证书</span>
+                    </div>
+                </div>
+                
+                <div class="story-footer">
+                    <button class="story-details-btn">
+                        查看详细故事
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer" id="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand" id="easterEgg">
+                    <div class="logo">
+                        <span class="logo-icon">AI</span>
+                    </div>
+                    <p>开窍AI实验室</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-section">
+                        <h3>联系方式</h3>
+                        <div class="contact-info">
+                            <div class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                <p>yansirui_813@163.com</p>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-phone"></i>
+                                <p>+86 123 4567 8900</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer-section">
+                        <h3>友情链接/教师作品</h3>
+                        <ul class="friend-links">
+                            <li><a href="https://creatimix.com" target="_blank">
+                                <span class="link-name">Creatimix</span>
+                                <span class="link-desc">创意设计与技术的交融</span>
+                            </a></li>
+                            <li><a href="https://maliwriter.com" target="_blank">
+                                <span class="link-name">Maliwriter</span>
+                                <span class="link-desc">专业的写作与创作平台</span>
+                            </a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h3>友情链接/学生作品</h3>
+                        <ul class="friend-links">
+                            <li><a href="https://2050reunion.github.io/#register" target="_blank">
+                                <span class="link-name">2050Reunion</span>
+                                <span class="link-desc">探索2050的科技世界</span>
+                            </a></li>
+                            <li><a href="https://2050reunion.github.io/huayushop/index.html" target="_blank">
+                                <span class="link-name">HuayuShop</span>
+                                <span class="link-desc">专业的花艺设计与服务</span>
+                            </a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h3>关注我们</h3>
+                        <div class="social-links">
+                            <a href="javascript:void(0)" title="敬请期待"><i class="fab fa-weixin"></i></a>
+                            <a href="javascript:void(0)" title="敬请期待"><i class="fab fa-weibo"></i></a>
+                            <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 开窍AI实验室 版权所有</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html> 

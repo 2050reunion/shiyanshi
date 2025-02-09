@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学生作品 - 开窍AI实验室</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- 在 body 开头添加 -->
+    <div class="page-transition">
+        <span class="transition-text">切换界面中...</span>
+    </div>
+
+    <!-- 导航栏 -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-brand">
+                <div class="logo">
+                    <span class="logo-icon">AI</span>
+                </div>
+                <div class="brand-container">
+                    <span class="brand-text">开窍AI实验室</span>
+                    <div class="authors">
+                        <span class="author">@鄢思睿</span>
+                        <span class="author">@唐子卿</span>
+                        <span class="author">@唐瑞</span>
+                        <span class="author">@王欢</span>
+                        <span class="author">@包神</span>
+                    </div>
+                </div>
+            </div>
+            <button class="nav-toggle" aria-label="toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">首页</a></li>
+                <li><a href="index.html#intro" class="nav-link">实验室介绍</a></li>
+                <li><a href="index.html#projects" class="nav-link">研究方向</a></li>
+                <li><a href="index.html#courses" class="nav-link">课程推荐</a></li>
+                <li><a href="index.html#news" class="nav-link">最新动态</a></li>
+                <li><a href="students.html" class="nav-link works-btn">学生作品</a></li>
+                <li><a href="index.html#footer" class="nav-link contact-btn">联系我们</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- 学生作品展示区 -->
+    <section class="student-works">
+        <div class="container">
+            <h2 class="section-title">优秀学生作品展示</h2>
+            
+            <!-- 修改搜索引擎结构 -->
+            <div class="search-container">
+                <div class="search-wrapper">
+                    <input type="text" class="search-box" placeholder="输入关键词搜索作品..." id="searchInput">
+                    <i class="fas fa-search search-icon"></i>
+                    <div class="search-pulse"></div>
+                    <button class="search-btn" id="searchBtn">
+                        <i class="fas fa-search"></i> 搜索
+                    </button>
+                </div>
+                <div class="search-tip">
+                    支持搜索：作品名称、作者、简介、作品形式
+                </div>
+            </div>
+            
+            <!-- 作品分类筛选 -->
+            <div class="works-filter">
+                <button class="filter-btn active" data-filter="all">
+                    <i class="fas fa-th"></i>全部
+                </button>
+                <button class="filter-btn" data-filter="music">
+                    <i class="fas fa-music"></i>音乐
+                </button>
+                <button class="filter-btn" data-filter="novel">
+                    <i class="fas fa-book"></i>小说
+                </button>
+                <button class="filter-btn" data-filter="website">
+                    <i class="fas fa-globe"></i>网站
+                </button>
+                <button class="filter-btn" data-filter="video">
+                    <i class="fas fa-video"></i>视频
+                </button>
+            </div>
+
+            <!-- 作品网格 -->
+            <div class="works-grid">
+                <!-- 音乐作品 -->
+                <div class="work-card" data-category="music">
+                    <div class="work-info">
+                        <h3>AI音乐：setsail</h3>
+                        <p>利用深度学习模型创作的音乐作品，融合东西方音乐元素。</p>
+                        <span class="work-author">作者: 舒扬</span>
+                        <audio controls class="music-player">
+                            <source src="舒扬音乐setsail.mp3" type="audio/mp3">
+                            您的浏览器不支持音频播放。
+                        </audio>
+                    </div>
+                </div>
+
+                <div class="work-card" data-category="music">
+                    <div class="work-info">
+                        <h3>AI音乐：十四岁的光</h3>
+                        <p>AI辅助创作的歌曲，描绘了十四岁女孩对未来的憧憬与向往。</p>
+                        <span class="work-author">作者: 唐子卿</span>
+                        <audio controls class="music-player">
+                            <source src="子卿.mp3" type="audio/mp3">
+                            您的浏览器不支持音频播放。
+                        </audio>
+                    </div>
+                </div>
+                <!-- 小说作品 -->
+                <div class="work-card" data-category="novel">
+                    <div class="work-info">
+                        <h3>《数字纪元》</h3>
+                        <p>AI辅助创作的科幻小说，描绘了一个人工智能与人类共存的未来世界。</p>
+                        <span class="work-author">作者: AI</span>
+                        <a href="digital-era.html" class="read-btn">
+                            <i class="fas fa-book-open"></i> 阅读全文
+                        </a>
+                    </div>
+                </div>
+
+                <div class="work-card" data-category="novel">
+                    <div class="work-info">
+                        <h3>《智能心语》</h3>
+                        <p>探讨人工智能伦理的哲理小说，深入思考科技发展与人性。</p>
+                        <span class="work-author">作者: AI</span>
+                        <a href="ai-heart.html" class="read-btn">
+                            <i class="fas fa-book-open"></i> 阅读全文
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 网站作品 -->
+                <div class="work-card" data-category="website">
+                    <div class="work-info">
+                        <h3>花语花店网站</h3>
+                        <p>为花语花店设计的在线商店，提供鲜花预订和在线支付服务。</p>
+                        <span class="work-author">作者: 鄢思睿</span>
+                        <a href="https://2050reunion.github.io/huayushop/index.html" target="_blank" class="work-link">
+                            <i class="fas fa-external-link-alt"></i> 访问网站
+                        </a>
+                    </div>
+                </div>
+
+                <div class="work-card" data-category="website">
+                    <div class="work-info">
+                        <h3>2050团聚推广网站</h3>
+                        <p>为2050团聚设计的推广网站，助力一场跨越时空的未来科技盛宴。</p>
+                        <span class="work-author">作者: 唐瑞</span>
+                        <a href="https://2050reunion.github.io/#register" target="_blank" class="work-link">
+                            <i class="fas fa-external-link-alt"></i> 访问网站
+                        </a>
+                    </div>
+                </div>
+                <!-- 视频作品 -->
+                <div class="work-card" data-category="video">
+                    <div class="work-image">
+                        <img src="天钰.mp4" alt="AI视频作品1">
+                        <button class="preview-btn" data-video="天钰.mp4">
+                            <i class="fas fa-play"></i> 预览视频
+                        </button>
+                    </div>
+                    <div class="work-info">
+                        <h3>AI视频：柿子熟了</h3>
+                        <p>利用AI技术制作的小女孩采摘柿子时的场景，活泼风趣，田园美妙。</p>
+                        <span class="work-author">作者: 李天钰</span>
+                    </div>
+                </div>
+
+                <div class="work-card" data-category="video">
+                    <div class="work-image">
+                        <img src="思睿.mp4" alt="AI视频作品2">
+                        <button class="preview-btn" data-video="思睿.mp4">
+                            <i class="fas fa-play"></i> 预览视频
+                        </button>
+                    </div>
+                    <div class="work-info">
+                        <h3>AI视频：小猫馍馍</h3>
+                        <p>AI辅助制作的动画短片，小猫馍馍的日常生活，可爱风趣。</p>
+                        <span class="work-author">作者: 鄢思睿</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <span class="logo-icon">AI</span>
+                    </div>
+                    <p>开窍AI实验室</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-section">
+                        <h3>联系方式</h3>
+                        <div class="contact-info">
+                            <div class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                <p>yansirui_813@163.com</p>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-phone"></i>
+                                <p>+86 123 4567 8900</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer-section">
+                        <h3>友情链接/教师作品</h3>
+                        <ul class="friend-links">
+                            <li><a href="https://creatimix.com" target="_blank">
+                                <span class="link-name">Creatimix</span>
+                                <span class="link-desc">创意设计与技术的交融</span>
+                            </a></li>
+                            <li><a href="https://maliwriter.com" target="_blank">
+                                <span class="link-name">Maliwriter</span>
+                                <span class="link-desc">专业的写作与创作平台</span>
+                            </a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h3>友情链接/学生作品</h3>
+                        <ul class="friend-links">
+                            <li><a href="https://2050reunion.github.io/#register" target="_blank">
+                                <span class="link-name">2050Reunion</span>
+                                <span class="link-desc">探索2050的科技世界</span>
+                            </a></li>
+                            <li><a href="https://2050reunion.github.io/huayushop/index.html" target="_blank">
+                                <span class="link-name">HuayuShop</span>
+                                <span class="link-desc">专业的花艺设计与服务</span>
+                            </a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h3>关注我们</h3>
+                        <div class="social-links">
+                            <a href="javascript:void(0)" title="敬请期待"><i class="fab fa-weixin"></i></a>
+                            <a href="javascript:void(0)" title="敬请期待"><i class="fab fa-weibo"></i></a>
+                            <a href="https://github.com/2050Reunion" target="_blank"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 开窍AI实验室 版权所有</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 修改视频预览模态框 -->
+    <div class="video-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button class="close-modal">&times;</button>
+                <button class="back-btn">
+                    <i class="fas fa-arrow-left"></i> 返回欣赏
+                </button>
+            </div>
+            <video controls>
+                <source src="" type="video/mp4">
+                您的浏览器不支持视频播放。
+            </video>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html> 
